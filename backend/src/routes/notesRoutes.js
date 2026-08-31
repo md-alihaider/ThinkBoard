@@ -12,16 +12,17 @@ const router = express.Router();
 //read
 router.get("/", getAllNotes);
 
+//read by id
+router.get("/:id", getNoteById);
+
 //create
 router.post("/", createNote);
 
-//read by id
-router.get("/:id", getNoteById);
+//update by id
+router.put("/:id", updateNoteById);
 
 //delete
 router.delete("/:id", deleteNoteById);
 
-//update by id
-router.put("/:id", updateNoteById);
 
 export default router;
